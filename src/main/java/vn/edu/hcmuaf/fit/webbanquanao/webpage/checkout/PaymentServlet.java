@@ -103,21 +103,12 @@ public class PaymentServlet extends HttpServlet {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
         formatter.setTimeZone(vietnamTimeZone); // QUAN TRỌNG: Set timezone cho formatter
 
-        // Thêm ngay sau phần khởi tạo Calendar
-        System.out.println("Múi giờ server hiện tại: " + TimeZone.getDefault().getID());
-        System.out.println("Múi giờ đang sử dụng cho VNPAY: " + cld.getTimeZone().getID());
-
         String vnp_CreateDate = formatter.format(cld.getTime());
         vnp_Params.put("vnp_CreateDate", vnp_CreateDate);
 
         cld.add(Calendar.MINUTE, 30);
         String vnp_ExpireDate = formatter.format(cld.getTime());
         vnp_Params.put("vnp_ExpireDate", vnp_ExpireDate);
-
-        // Thêm log kiểm tra
-        System.out.println("[VN TIME] Thời gian tạo: " + vnp_CreateDate);
-        System.out.println("[VN TIME] Thời gian hết hạn: " + vnp_ExpireDate);
-        System.out.println("IP Address sẽ gửi tới VNPAY: " + vnp_IpAddr);
 
         List fieldNames = new ArrayList(vnp_Params.keySet());
         Collections.sort(fieldNames);
