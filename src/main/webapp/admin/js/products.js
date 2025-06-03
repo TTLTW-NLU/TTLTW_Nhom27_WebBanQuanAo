@@ -129,7 +129,7 @@ function deleteProduct(event) {
 
     if (confirm(`Bạn có chắc chắn muốn xóa sản phẩm ID: ${productId}?`)) {
         $.ajax({
-            url: `/WebBanQuanAo/admin/api/products/${productId}`,
+            url: `/admin/api/products/${productId}`,
             type: 'DELETE',
             cache: false,
             success: function (response) {
@@ -155,7 +155,7 @@ function openEditProductPopup(event) {
     overlay.style.display = "block";
 
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/products/${productId}`,
+        url: `/admin/api/products/${productId}`,
         type: 'GET',
         success: function (response) {
             const data = response.data;
@@ -203,7 +203,7 @@ function saveProductEdits(event) {
     };
 
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/products/${product.id}`, // Gửi id trên URL như orders
+        url: `/admin/api/products/${product.id}`, // Gửi id trên URL như orders
         type: 'PUT',
         contentType: 'application/json',
         data: JSON.stringify(product),
@@ -287,7 +287,7 @@ function createProduct(event) {
     console.log(JSON.stringify(productData));
 
     // Gửi dữ liệu qua fetch
-    fetch('/WebBanQuanAo/admin/api/products', {
+    fetch('/admin/api/products', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

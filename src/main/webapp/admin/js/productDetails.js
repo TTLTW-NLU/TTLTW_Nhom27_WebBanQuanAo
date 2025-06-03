@@ -6,7 +6,7 @@ function openProductDetails(event) {
 
     // Gửi yêu cầu AJAX để lấy dữ liệu chi tiết sản phẩm theo productId
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/product-details/${productId}`,
+        url: `/admin/api/product-details/${productId}`,
         type: 'GET',
         success: function (response) {
             const data = response.data;
@@ -73,7 +73,7 @@ function saveProductDetailEdits(event) {
 
     // Gửi yêu cầu AJAX để lưu chi tiết sản phẩm
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/product-details/${productDetail.id}`, // Đảm bảo đường dẫn chính xác
+        url: `/admin/api/product-details/${productDetail.id}`, // Đảm bảo đường dẫn chính xác
         type: 'PUT',
         contentType: 'application/json',
         dataType: 'json',
@@ -127,7 +127,7 @@ function createProductDetails(event) {
     productDetails.color = productDetails.color;
     productDetails.image = productDetails.image.trim();
 
-    fetch('/WebBanQuanAo/admin/api/product-details', {
+    fetch('/admin/api/product-details', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

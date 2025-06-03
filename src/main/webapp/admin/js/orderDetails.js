@@ -14,7 +14,7 @@ function openOrderItemDetails(event) {
 
     // Gửi yêu cầu AJAX để lấy dữ liệu chi tiết orderItem theo orderId
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/order-details/${orderId}`,
+        url: `/admin/api/order-details/${orderId}`,
         type: 'GET',
         dataType: 'json',
         cache: false,
@@ -86,7 +86,7 @@ function saveOrderItemEdits(event) {
 
     // Gửi yêu cầu AJAX để lưu chi tiết orderItem
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/order-details/${orderItemDetail.id}`, // Đảm bảo đường dẫn chính xác
+        url: `/admin/api/order-details/${orderItemDetail.id}`, // Đảm bảo đường dẫn chính xác
         type: 'PUT',
         contentType: 'application/json',
         dataType: 'json',

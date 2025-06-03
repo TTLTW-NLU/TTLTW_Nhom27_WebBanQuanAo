@@ -3,7 +3,7 @@
 // ===============Recent_order_data===============//
 function fetchOrders() {
     $.ajax({
-        url: '/WebBanQuanAo/admin/api/orders',
+        url: '/admin/api/orders',
         type: 'GET',
         dataType: 'json',
         cache: false,
@@ -103,7 +103,7 @@ function openEditOrderPopup(event) {
     overlay.style.display = "block";
 
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/orders/${orderId}`,
+        url: `/admin/api/orders/${orderId}`,
         type: 'GET',
         dataType: 'json',
         cache: false,
@@ -144,7 +144,7 @@ function deleteOrder(event) {
 
     if (confirm(`Bạn có chắc chắn muốn xóa đơn hàng với ID: ${orderId}?`)) {
         $.ajax({
-            url: `/WebBanQuanAo/admin/api/orders/${orderId}`,
+            url: `/admin/api/orders/${orderId}`,
             type: 'DELETE',
             dataType: 'json',
             cache: false,
@@ -176,7 +176,7 @@ function saveOrderEdits(event) {
     };
 
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/orders/${order.id}`,
+        url: `/admin/api/orders/${order.id}`,
         type: 'PUT',
         contentType: 'application/json',
         dataType: 'json',

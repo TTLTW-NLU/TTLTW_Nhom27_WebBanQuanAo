@@ -1,7 +1,7 @@
 // Lấy danh sách người dùng từ server và khởi tạo DataTables
 function fetchUsers() {
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/users`,
+        url: `/admin/api/users`,
         type: 'GET',
         dataType: 'json',
         success: function (response) {
@@ -98,7 +98,7 @@ function deleteUser(event) {
     const userName = event.target.getAttribute("data-username");
     if (confirm(`Bạn có chắc chắn muốn xóa người dùng: ${userName}?`)) {
         $.ajax({
-            url: `/WebBanQuanAo/admin/api/users/${encodeURIComponent(userName)}`,
+            url: `/admin/api/users/${encodeURIComponent(userName)}`,
             type: 'DELETE',
             dataType: 'json',
             success: function (response) {
@@ -122,7 +122,7 @@ function openEditPopup(event) {
     overlay.style.display = "block";
 
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/users/${encodeURIComponent(userName)}`,
+        url: `/admin/api/users/${encodeURIComponent(userName)}`,
         type: 'GET',
         dataType: 'json',
         success: function (response) {
@@ -168,7 +168,7 @@ function saveUserEdits(event) {
     console.log("JSON object gửi đi:", JSON.stringify(user));
 
     $.ajax({
-        url: `/WebBanQuanAo/admin/api/users/${encodeURIComponent(user.userName)}`,
+        url: `/admin/api/users/${encodeURIComponent(user.userName)}`,
         type: 'PUT',
         contentType: 'application/json',
         dataType: 'json',
@@ -210,7 +210,7 @@ function createUser(event) {
     const form = document.getElementById('add-user-form');
     const userData = Object.fromEntries(new FormData(form).entries());
 
-    fetch('/WebBanQuanAo/admin/api/users', {
+    fetch('/admin/api/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)

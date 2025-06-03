@@ -55,7 +55,7 @@
 
             <!-- Google reCAPTCHA -->
             <div class="recaptcha-wrapper">
-                <div class="g-recaptcha" data-sitekey="6LcIsA4rAAAAAKTypNS-94XJI8a-Hq34isJYFdDQ"></div>
+                <div class="g-recaptcha" data-sitekey="6LeYvVQrAAAAABLpx_dBF4puReaWiCGAFJOZnyEq"></div>
             </div>
 
             <p>hoặc đăng nhập bằng tài khoản mạng xã hội</p>
@@ -119,7 +119,7 @@
 
             <!-- Google reCAPTCHA -->
             <div class="recaptcha-wrapper">
-                <div class="g-recaptcha" data-sitekey="6LcIsA4rAAAAAKTypNS-94XJI8a-Hq34isJYFdDQ"></div>
+                <div class="g-recaptcha" data-sitekey="6LeYvVQrAAAAABLpx_dBF4puReaWiCGAFJOZnyEq"></div>
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg">Đăng Ký</button>
