@@ -1,0 +1,620 @@
+main {
+  display: none;
+}
+
+main.block {
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+a:hover{
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.row {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.nav-item {
+  font-size: 1.6rem; /* Điều chỉnh font-size */
+  padding: 2rem;
+  border: none;
+  list-style-type: none;
+}
+
+.nav-item.active {
+  color: var(--white-color);
+  background-color: var(--second-color);
+}
+
+.nav-item i {
+  margin-right: 1.5rem;
+}
+
+.nav-item:hover {
+  background: linear-gradient(
+    135deg,
+    var(--second-color),
+    var(--lighter-second-color)
+  );
+  color: var(--white-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+/* Thêm style cho số thông báo */
+.notification-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+  min-width: 1.5rem;
+  text-align: center;
+  display: none; /* Ẩn đi khi không có thông báo */
+}
+
+/* Hiển thị notification khi có số thông báo */
+.nav-item .notification-count {
+  display: inline-block;
+}
+
+/* Hiệu ứng hover cho thông báo */
+.nav-item:hover .notification-count {
+  background-color: var(--lighter-second-color);
+}
+
+.bg-second-color {
+  background-color: var(--second-color);
+}
+
+.text-second-color {
+  color: var(--second-color);
+}
+
+.form-control {
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-light);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.btn-second-color {
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+  padding: 1rem 3rem;
+  border: 2px solid var(--second-color) !important;
+  color: var(--second-color) !important;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-second-color:hover {
+  background: linear-gradient(
+    135deg,
+    var(--second-color),
+    var(--lighter-second-color)
+  );
+  color: var(--white-color) !important;
+  box-shadow: var(--box-shadow-hover);
+  border: none;
+}
+
+.bg-white {
+  box-shadow: var(--box-shadow-light);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+h4 {
+  font-size: 2.4rem; /* Điều chỉnh font-size */
+  color: var(--second-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-group label {
+  font-size: 1.9rem; /* Điều chỉnh font-size */
+  color: var(--second-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select {
+  background-color: #fdfdfd;
+  border: 1px solid var(--second-color);
+  box-shadow: var(--box-shadow-light);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+  border-color: var(--lighter-second-color);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.popup {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.popup .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
+.popup form {
+  background-color: #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+  left: 50%;
+  max-height: 85vh;
+  max-width: 500px;
+  padding: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55vw;
+  box-shadow: var(--box-shadow-light);
+}
+
+.popup form .form-group {
+  width: 100%;
+}
+
+.popup form button {
+  width: 100%;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem; /* Điều chỉnh font-size */
+  color: #333;
+  cursor: pointer;
+}
+
+.close-button i {
+  pointer-events: none;
+}
+
+#order-container {
+  background-color: var(--white-color);
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow-light);
+}
+
+#order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#order-title {
+  font-size: 2.8rem; /* Điều chỉnh font-size */
+  color: var(--second-color);
+}
+
+#order-policy {
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+  background-color: var(--second-color);
+  color: var(--white-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+}
+
+#order-policy:hover {
+  background-color: var(--lighter-second-color);
+}
+
+#order-12345 {
+  border: 1px solid #ddd;
+  box-shadow: var(--box-shadow-hover);
+  border-radius: 1rem;
+}
+
+#order-info h5 {
+  font-size: 2.4rem; /* Điều chỉnh font-size */
+  margin-bottom: 1rem;
+  color: var(--second-color);
+}
+
+#order-info p {
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+}
+
+#order-total {
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+  padding: 0.8rem 1.5rem;
+}
+
+#order-cancel-btn {
+  font-size: 1.6rem; /* Điều chỉnh font-size */
+  background-color: transparent;
+  color: #dc3545; /* Màu đỏ cho nút hủy */
+  border: 2px solid #dc3545;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#order-completed-btn {
+  font-size: 1.6rem; /* Điều chỉnh font-size */
+  background-color: transparent;
+  color: #28a745; /* Màu xanh lá cho nút hoàn thành */
+  border: 2px solid #28a745;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#order-cancel-btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+#order-completed-btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#order-product-list {
+  padding: 0;
+  list-style: none;
+}
+
+#order-product-item-1,
+#order-product-item-2 {
+  background: var(--white-color);
+  border: none;
+  padding: 1.5rem;
+}
+
+.order-product-img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+}
+
+#product-name {
+  font-size: 2rem; /* Điều chỉnh font-size */
+  color: var(--black-color);
+}
+
+#product-qty {
+  font-size: 1.6rem; /* Điều chỉnh font-size */
+  color: var(--lighter-second-color);
+}
+
+#product-old-price {
+  color: #999;
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+}
+
+#product-new-price {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+}
+
+#order-fee,
+#order-total-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#order-total-section p {
+  font-size: 2rem; /* Điều chỉnh font-size */
+  font-weight: bold;
+}
+
+#order-feedback {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card h5,
+.card h6,
+.card p {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 2.4rem; /* Điều chỉnh font-size */
+}
+
+.card .text-second-color {
+  color: #e67e22;
+}
+
+.card .text-muted {
+  color: #95a5a6;
+  font-size: 1.5rem; /* Điều chỉnh font-size */
+}
+
+.card .order-product-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card .list-group-item {
+  border: none;
+  padding: 1.5rem 2rem;
+  background-color: #f9f9f9;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.5rem; /* Điều chỉnh font-size */
+}
+
+.card .list-group-item:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card .list-group-item .text-right p {
+  font-weight: 600;
+  color: #e74c3c;
+  font-size: 1.6rem; /* Điều chỉnh font-size */
+}
+
+.card .form-group label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 0.6rem;
+  font-size: 1.4rem; /* Điều chỉnh font-size */
+}
+
+.card .form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.6rem; /* Điều chỉnh font-size */
+}
+
+.card .btn-primary {
+  font-size: 1.8rem; /* Điều chỉnh font-size */
+  padding: 1rem 2rem;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.card .btn-primary:hover {
+  background-color: #2980b9;
+}
+
+/* Voucher */
+#voucher-wallet {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-light);
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.wallet-header h4 {
+  font-size: 2.4rem;
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.btn-add-voucher {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-voucher:hover {
+  background-color: #2980b9;
+}
+
+.voucher-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.voucher-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-light);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.voucher-info h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.voucher-code {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.voucher-desc {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.voucher-expiry {
+  font-size: 1.4rem;
+  color: #e74c3c;
+}
+
+.btn-use {
+  background-color: var(--second-color);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1.2rem;
+}
+
+.btn-use:hover {
+  background-color: var(--lighter-second-color);
+}
+
+/* Thông báo */
+#notification {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-light);
+}
+
+#notification h4 {
+  font-size: 2.4rem;
+  color: var(--second-color);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.notification-card {
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow-light);
+}
+
+.notification-card h5 {
+  font-size: 2rem;
+  color: var(--second-color);
+  margin-bottom: 1rem;
+}
+
+.notification-card p {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.notification-card .text-muted {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+/* CSS cải thiện giao diện modal */
+.cancel-order-custom-modal .modal-content {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: cancelFadeIn 0.3s ease-in-out;
+}
+
+.cancel-order-custom-modal .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: none;
+  padding: 20px;
+}
+
+.cancel-order-custom-modal .modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.cancel-order-custom-modal .modal-body {
+  padding: 20px;
+}
+
+.cancel-order-custom-modal .modal-footer {
+  border-top: none;
+  padding: 15px 20px;
+}
+
+.cancel-order-custom-modal .form-group label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.cancel-order-custom-modal .form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  transition: border-color 0.3s;
+}
+
+.cancel-order-custom-modal .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.cancel-order-custom-modal .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.cancel-order-custom-modal .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.cancel-order-custom-modal .btn-secondary {
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+@keyframes cancelFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wallet-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-add-voucher {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,264 @@
+body {
+    background-color: var(--primary-color);
+}
+
+/* ========================== For class ========================== */
+.container {
+    max-width: 1200px;
+}
+
+/* ========================== Carousel ========================== */
+#customCarousel {
+    position: relative;
+}
+
+/* Carousel caption */
+.carousel_caption {
+    position: absolute;
+    width: 100%;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel_caption h5 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.carousel_caption p {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.carousel_caption a {
+    padding: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.carousel_caption a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.carousel_caption a:focus {
+    box-shadow: none;
+}
+
+/* Control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important;
+}
+
+.carousel-control-prev:focus:not(:hover),
+.carousel-control-next:focus:not(:hover) {
+    opacity: 0;
+    outline: none;
+}
+
+.carousel-control-prev {
+    left: 0;
+    width: 100px;
+}
+
+.carousel-control-next {
+    right: 0;
+    width: 100px;
+}
+
+/* ========================== Sale section ========================== */
+#section_sale {
+    margin-top: 18rem;
+}
+
+#section_sale h2 {
+    margin-bottom: 3rem;
+}
+
+#section_sale .item {
+    text-align: center;
+}
+
+#section_sale .item img {
+    width: 100%;
+    height: 25rem;
+    margin-bottom: 15px;
+}
+
+#section_sale .item h4 {
+    text-align: start;
+    font-size: 1.9rem;
+}
+
+#section_sale .product-price {
+    font-size: 1.5rem;
+    text-align: start;
+    font-weight: 700;
+}
+
+#section_sale a {
+    color: #000000;
+}
+
+#section_sale a:hover {
+    text-decoration: none;
+}
+
+#section_sale a img {
+    transition: transform .3s ease;
+}
+
+#section_sale a:hover img {
+    transform: scale(0.98);
+}
+
+/* ========================== Section Collection ========================== */
+#section_banner_collection {
+    margin-top: 10rem;
+}
+
+#section_collection {
+    margin-top: 7rem;
+    padding: 4rem 2rem;
+}
+
+#section_collection .collection-header h2 {
+    font-size: 1.8rem;
+    color: #555;
+    margin: 0;
+}
+
+#section_collection .collection-header h3 {
+    font-size: 2.8rem;
+    color: var(--lighter-second-color);
+    margin: 0.5rem 0 2rem;
+}
+
+#section_collection .see-more {
+    background-color: #ecede8;
+    color: var(--second-color);
+    padding: 1rem 2rem;
+    border-radius: 10%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#section_collection .see-more:hover {
+    box-shadow: 0 0.4rem 1rem -3px #474747;
+}
+
+#section_collection .product-grid .product-item {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 350px;
+}
+
+#section_collection .product-grid .product-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#section_collection .product-grid .product-item:hover img {
+    transform: scale(1.1);
+}
+
+#section_collection .product-grid .price {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+}
+
+#section_collection .product-grid del {
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+#section_collection .product-price {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+}
+
+/* ========================== Section New Arrivals ========================== */
+#section_new_arrivals {
+    margin-top: 12rem;
+}
+
+#section_new_arrivals h2 {
+    margin-bottom: 3rem;
+}
+
+#section_new_arrivals .item {
+    text-align: center;
+}
+
+#section_new_arrivals .item img {
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 15px;
+}
+
+#section_new_arrivals .item h4 {
+    text-align: start;
+    font-size: 1.6rem;
+}
+
+#section_new_arrivals .item p {
+    font-size: 1.5rem;
+    text-align: start;
+    font-weight: 700;
+    color: #333;
+}
+
+#section_new_arrivals a {
+    color: #000000;
+}
+
+#section_new_arrivals a:hover {
+    text-decoration: none;
+}
+
+#section_new_arrivals a img {
+    transition: transform .3s ease;
+}
+
+#section_new_arrivals a:hover img {
+    transform: scale(0.98);
+}

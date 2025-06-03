@@ -1,0 +1,126 @@
+/* Custom Styles for the Return Policy Page */
+body {
+  background-color: var(--bg-color);
+  font-family: "Arial", sans-serif;
+}
+
+.policy-section {
+  padding: 4rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  box-shadow: var(--box-shadow-light);
+}
+
+.policy-section h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.policy-section ul {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-left: 2rem;
+}
+
+.policy-section ul li {
+  margin-bottom: 1.5rem;
+}
+
+.policy-section p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.policy-button button {
+  padding: 1.2rem 4rem;
+  font-size: 1.8rem;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.policy-button button:hover {
+  background-color: #3b9b84;
+  transform: scale(1.05);
+}
+
+.faq-section {
+  background-color: var(--white-color);
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+  box-shadow: var(--box-shadow-light);
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--second-color);
+  margin-bottom: 3rem;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-item button {
+  width: 100%;
+  padding: 1.3rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item button:hover {
+  background-color: #e9ecef;
+  transform: scale(1.02);
+}
+
+.faq-answer {
+  display: none;
+  padding: 1.5rem;
+  background-color: #f1f1f1;
+  font-size: 1.6rem;
+  color: #333;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.faq-answer.open {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .policy-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .policy-section ul {
+    font-size: 1.6rem;
+  }
+
+  .faq-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .policy-button button {
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+  }
+}

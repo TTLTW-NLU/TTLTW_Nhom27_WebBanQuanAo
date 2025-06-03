@@ -1,0 +1,598 @@
+/*====================== Css collect_intro. ====================*/
+.collect {
+  position: relative;
+  top: 12rem;
+}
+
+.collect_intro {
+  padding: 2rem 5rem;
+  text-align: center;
+}
+
+.collect_intro-left {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.collect-title {
+  font-size: 11rem;
+  font-weight: 600;
+  -webkit-text-stroke: 1px var(--second-color); /* viền chữ màu đen */
+  color: var(--white-color);
+  padding-bottom: 1.5rem;
+}
+
+.collect_title-small {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--second-color);
+}
+
+.collect-text {
+  font-size: 2.3rem;
+  line-height: 2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  color: var(--lighter-second-color);
+}
+
+.collect_intro-right {
+  padding: 5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.collect_intro-img {
+  height: 80vh;
+  width: 135vw;
+  border-radius: 2rem;
+  object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+.collect_title-small,
+.collect-title,
+.collect-text {
+  display: flex;
+  justify-content: center;
+}
+
+/*====================== End collect_intro ====================*/
+
+/*====================== Start collect_marquee ====================*/
+.collect_marquee {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: var(--second-color);
+}
+
+.collect_marquee-logo {
+  font-size: 4rem;
+  text-shadow: 4px 4px 4px var(--second-color); /* Bóng trắng */
+}
+
+.collect_marquee-text {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.collect_marquee-text p span {
+  padding: 0 4rem;
+}
+
+.collect_marquee-text p {
+  color: var(--second-color);
+  font-size: 2rem;
+  display: inline-block;
+  padding-left: 100%; /* Bắt đầu bên ngoài khung nhìn */
+  animation: marquee 10s linear infinite; /* Tốc độ chạy và lặp vô hạn */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*====================== End collect_marquee ====================*/
+
+/*====================== Start collect running clothes ====================*/
+
+.running-clothes__title {
+  font-size: 3rem;
+  margin: 3rem;
+  font-weight: bold;
+  color: var(--lighter-second-color);
+}
+
+.running_product-btns {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem;
+  color: var(--second-color);
+  cursor: pointer;
+}
+
+.running_product-btn {
+  padding: 1.5rem 4rem;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
+  border: 1px solid var(--second-color);
+  background-color: var(--primary-color);
+}
+
+.running_product-btn:hover {
+  background-color: var(--second-color);
+  color: var(--white-color);
+}
+
+/*====================== End collect running clothes ====================*/
+
+/*====================== Start running-polivy__list ====================*/
+
+.collect_running-policy {
+  background-color: var(--black-color);
+  margin: 6rem 0;
+}
+
+.collect_running-lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.running_policy-items {
+  width: 50rem;
+  height: 40rem;
+  overflow: hidden;
+  position: relative;
+  padding: 3.5rem 3rem;
+}
+
+.collect_running-lists .policy_items {
+  border-right: 0.1rem solid var(--white-color);
+  border-left: 0.1rem solid var(--white-color);
+}
+
+.running_policy-items img {
+  width: 50rem;
+  height: 45rem;
+  padding-right: 7.5rem;
+}
+
+.running_policy-orverlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 43.5rem;
+  height: 45rem;
+  top: 31rem;
+  color: var(--white-color);
+  transition: top 0.25s ease;
+}
+
+.running_policy-items:hover .running_policy-orverlay {
+  top: 3.5rem;
+}
+
+.running_policy-items:hover img {
+  display: none;
+}
+
+.running_policy-orverlay .top {
+  flex: 1;
+  border-bottom: 0.3rem solid var(--white-color);
+  padding-bottom: 1rem;
+}
+
+.running_policy-orverlay .bottom {
+  flex: 9;
+  padding-top: 2rem;
+}
+
+.running_policy-orverlay p,
+.running_policy-orverlay h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/*====================== End running-polivy__list ====================*/
+
+/* ========================== All products ========================== */
+#section_all_products {
+  margin-top: 5rem;
+}
+
+/* Top */
+#section_all_products .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+#section_all_products .top .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#section_all_products .top .filter .custom_icon {
+  font-size: 1.6rem;
+}
+
+#section_all_products .top h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#section_all_products .top .sort,
+#section_all_products .top .sort-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+#section_all_products .top .sort-mobile {
+  display: none;
+}
+
+#section_all_products .top .sort label,
+#section_all_products .top .sort-mobile label {
+  width: 20vw;
+  margin: 0;
+  text-align: center;
+}
+
+#section_all_products .top .sort select,
+#section_all_products .top .sort-mobile select {
+  font-size: 1.7rem;
+  width: 20vw;
+}
+
+/* Bottom */
+#section_all_products .bottom {
+  display: flex;
+}
+
+/* Filter */
+#section_all_products .filter {
+  width: 20%;
+  padding-right: 1rem;
+}
+
+#filter-category,
+#filter-size,
+#filter-color,
+#filter-price,
+#filter-brand,
+#filter-material,
+#filter-style,
+#filter-promotion,
+#filter-rating {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+#filter-category h4,
+#filter-size h4,
+#filter-color h4,
+#filter-price h4,
+#filter-brand h4,
+#filter-material h4,
+#filter-style h4,
+#filter-promotion h4,
+#filter-rating h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin: 0;
+}
+
+#section_all_products .filter-content.active {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#section_all_products .filter-content {
+  display: none;
+  padding-top: 5px;
+}
+
+#section_all_products .filter-content label {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#section_all_products .filter .arrow {
+  transition: transform 0.3s;
+}
+
+#section_all_products .filter .arrow.active {
+  transform: rotate(180deg);
+}
+
+/* List Products */
+#section_all_products .list_products {
+  width: 80%;
+  border-left: solid 1px #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pagination */
+#pagination {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+#pagination .product-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+#pagination .pagination-btn,
+#pagination .page-number {
+  padding: 1rem;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5rem;
+  text-align: center;
+}
+
+#pagination .pagination-btn {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+#pagination .page-number.active {
+  background-color: var(--second-color);
+  color: white;
+  font-weight: bold;
+}
+
+#pagination .dots {
+  border: none;
+  background-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+
+#pagination_numbers {
+  display: flex;
+  align-items: center;
+}
+
+/* ===============Css list product============== */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-items {
+  position: relative;
+  padding: 1.5rem 1.5rem;
+  border-radius: 8px;
+  width: 27rem;
+}
+
+.product-items:hover {
+  box-shadow: var(--box-shadow-light);
+}
+
+/* .clothes-size {
+  position: absolute;
+  width: 20rem;
+  background-color: rgba(192, 192, 192, 1);
+  height: 7rem;
+  bottom: 8rem;
+  left: 3.5rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.clothes-size p {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.clothes-size .btn-size {
+  font-size: 1.5rem;
+  background-color: var(--white-color);
+  margin-top: 0.7rem;
+  margin-left: 0.6rem;
+} */
+
+.product-items img {
+  width: 100%;
+  height: 30rem;
+  border-radius: 1rem;
+}
+
+.product-decrip {
+  padding-top: 1rem;
+}
+
+.product-decrip p {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.product-decrip div {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ===============end Css list product============== */
+
+@media (max-width: 833px) {
+  .collect_intro .collect-title {
+    font-size: 7rem;
+  }
+
+  #section_all_products .top .filter {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #section_all_products .top h1 {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .collect_intro-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .collect_intro .collect-title {
+    font-size: 7rem;
+  }
+
+  #section_all_products .top .sort,
+  #section_all_products .top .filter,
+  #section_all_products .top h1,
+  #section_all_products .bottom .filter {
+    display: none;
+  }
+
+  #section_all_products .top {
+    display: flex;
+    justify-content: end;
+    height: 4rem;
+  }
+
+  #section_all_products .top .sort-mobile {
+    display: block;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  #section_all_products .top .sort-mobile select {
+    border-radius: 2rem;
+    width: 20vw;
+    padding: 0.2rem;
+  }
+
+  #section_all_products .top .sort-mobile label {
+    font-size: 1.8rem;
+    text-align: end;
+  }
+
+  #section_all_products .bottom {
+    display: flex;
+    justify-content: center;
+    border: none;
+  }
+
+  .list_products,
+  .list_products .container,
+  .product-list {
+    width: 100% !important;
+  }
+
+  .collect_intro-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 571px) {
+  #section_all_products .bottom {
+    padding: 0;
+  }
+
+  .list_products {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-items {
+    width: 47%;
+    height: 33rem;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .product-items img {
+    width: 100%; /* Hình ảnh chiếm hết chiều rộng của container */
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .product-decrip {
+    padding-top: 1rem;
+  }
+
+  .product-decrip p {
+    font-size: 3.5vw;
+    margin-bottom: 0;
+  }
+
+  .product-decrip div {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .running-clothes__title {
+    font-size: 2.3rem;
+    margin: 3rem;
+    font-weight: bold;
+    color: var(--lighter-second-color);
+  }
+
+  .collect-text {
+    font-size: 1.5rem;
+  }
+
+  .collect_intro .collect-title {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .collect_marquee-text p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .collect_marquee-logo {
+    font-size: 2.5rem;
+  }
+
+  .collect_intro-right {
+    padding: 0;
+  }
+}
+

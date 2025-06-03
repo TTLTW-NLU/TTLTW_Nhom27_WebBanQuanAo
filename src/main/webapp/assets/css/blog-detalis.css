@@ -1,0 +1,495 @@
+/* Blog Details */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(246, 241, 235) !important;
+    font-family: IBMPlexSans;
+    font-size: 15px;
+    color: #444a59;
+    line-height: 1.8em;
+    font-weight: 400;
+    width: 100%;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.content-details {
+    margin: 50px 0;
+    margin-top: 25rem;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+h1.title-header {
+    font-size: 32px;
+    line-height: 1.5;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.time_post_view_single {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.time_post_view_single .clock label,
+.time_post_view_single .view label {
+    margin-left: 3px;
+    margin-top: 1px;
+}
+
+.time_post_view_single label {
+    color: #a8a8a8;
+    padding-top: 4px;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+.content_first_letter .wp-caption-text {
+    text-align: center;
+}
+
+.content_first_letter {
+    margin-top: 10px;
+}
+
+.content_first_letter .first-char::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+    line-height: 0.9;
+    position: relative;
+    top: -2px;
+    color: #365952;
+}
+
+.content_first_letter span,
+.content_first_letter a {
+    font-size: 1.4em;
+}
+
+em {
+    font-style: italic;
+}
+
+.content_first_letter a {
+    color: #365952 !important;
+    text-decoration: none;
+}
+
+#ez-toc-container {
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    display: table;
+    margin-bottom: 1em;
+    padding: 10px 20px 10px 10px;
+    position: relative;
+    width: auto;
+}
+
+.ez-toc-title-container {
+    display: table;
+    width: 100%;
+}
+
+.ez-toc-title,
+.ez-toc-title-toggle {
+    display: inline;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#ez-toc-container a.ez-toc-toggle {
+    color: #444;
+    background: inherit;
+    border: inherit;
+}
+
+.ez-toc-icon-toggle-span {
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 30px;
+    justify-content: center;
+    direction: ltr;
+}
+
+#ez-toc-container.ez-toc-light-brown {
+    background: rgb(246, 241, 235);
+}
+
+#ez-toc-container li,
+#ez-toc-container ul,
+#ez-toc-container ul li,
+div.ez-toc-widget-container,
+div.ez-toc-widget-container li {
+    background: 0 0;
+    list-style: none;
+    line-height: 1.6;
+    margin: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#ez-toc-container .ez-toc-js-icon-con,
+#ez-toc-container .ez-toc-toggle label,
+.ez-toc-cssicon {
+    float: right;
+    position: relative;
+    font-size: 16px;
+    padding: 0;
+    border: 1px solid #999191;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 10px;
+    width: 35px;
+    transition: transform 0.3s ease;
+}
+
+div#ez-toc-container ul li {
+    font-weight: 500;
+    font-size: 95%;
+}
+
+div#ez-toc-container .ez-toc-title {
+    font-weight: 500;
+    font-size: 120%;
+}
+
+#ez-toc-container .ez-toc-title {
+    text-align: left;
+    line-height: 1.45;
+    margin: 0;
+    padding: 0;
+}
+
+#ez-toc-container a:visited {
+    color: #9f9f9f;
+}
+
+#ez-toc-container a {
+    color: #444;
+    box-shadow: none;
+    text-decoration: none;
+    text-shadow: none;
+    display: inline-flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+.ez-toc-container ul ul,
+.ez-toc div.ez-toc-widget-container ul ul {
+    margin-left: 1.5em;
+}
+
+.eztoc-toggle-hide-by-default {
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+
+.eztoc-toggle-show {
+    display: block;
+    height: auto;
+    opacity: 1;
+}
+
+#ez-toc-container.eztoc-open .ez-toc-js-icon-con {
+    transform: translateX(250px);
+}
+
+#ez-toc-container.eztoc-closed .ez-toc-js-icon-con {
+    transform: translateX(0px);
+}
+
+.eztoc-icon-toggle-span svg {
+    transition: transform 0.3s ease;
+}
+
+#ez-toc-container .ez-toc-list {
+    overflow: hidden;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.ez-toc-list {
+    display: none;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.baivietlienquan h5.title,
+.title_cmt {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+}
+
+.cmt {
+    background: #e1e1e1;
+    padding: 40px 30px;
+    font-size: 15px;
+}
+
+.title_cmt {
+    margin-bottom: 30px;
+}
+
+p.nocomments {
+    margin: 0 0 10px;
+}
+
+#commentform {
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+}
+
+#commentform input[type*=text],
+#commentform input[type*=mail],
+#commentform textarea {
+    width: 100%;
+    padding: 8px 10px 8px 20px;
+    border-radius: 0;
+    border: none;
+    background: #fff;
+    color: #a8a8a8;
+}
+
+.content_cmt {
+    margin-bottom: 20px;
+}
+
+#commentform textarea {
+    max-height: 130px;
+}
+
+#commentform .row {
+    margin: 0 -10px !important;
+}
+
+#commentform [class*=col-xs-] {
+    padding: 0 10px !important;
+}
+
+#commentform label {
+    display: block;
+    font-weight: unset;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#commentform input[type*=submit] {
+    background: #365952 !important;
+    color: #fff;
+    padding: 10px 24px;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    display: table;
+    margin: 30px auto 0 auto;
+}
+
+.baivietlienquan {
+    border-top: 1px solid #e6e6e6;
+    margin-top: 40px;
+}
+
+.baivietlienquan h5.title {
+    margin-top: 30px;
+}
+
+.baivietlienquan ul {
+    padding-left: 0;
+    margin: 0 -15px;
+}
+
+.baivietlienquan ul li:nth-child(4n+1) {
+    clear: both;
+}
+
+.baivietlienquan li {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.baivietlienquan a {
+    color: #000;
+}
+.baivietlienquan img{
+    width: 250px;
+    height: 300px;
+}
+.title_post a {
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 700;
+}
+
+.btn-primary,
+.post_meta a,
+.read_more a {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 24px;
+    background: 0 0 !important;
+    border-color: unset !important;
+    border: none;
+    padding: 0;
+    letter-spacing: 2.2px;
+    font-weight: 700;
+}
+
+.sidebarnew .widget {
+    margin-bottom: 60px;
+}
+
+.sidebarnew .widget img {
+    width: 100% !important;
+}
+
+.sidebarnew .title_widget {
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.new_post_sidebar .new_item:first-child {
+    border-top: none;
+}
+
+.new_post_sidebar .new_item {
+    padding: 15px 0;
+    border-top: 1px solid #ebebeb;
+}
+.new_post_sidebar .new_item .content_item {
+    display: flex;
+    align-items: center;
+}
+.new_post_sidebar .new_item .content_item .thumbnail {
+    flex: 0 0 100px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.new_post_sidebar .new_item .post_meta a {
+    font-size: 16px;
+    text-transform: none;
+    font-weight: 400;
+    color: #000;
+    overflow: hidden;
+    line-height: 170%;
+    letter-spacing: unset;
+}
+
+.sidebarnew img {
+    width: 100px;
+    height: 100px;
+}
+@media (max-width: 768px) {
+    .l_layout img, 
+    .baivietlienquan img {
+        max-height: 200px; 
+    }
+}
+@media (max-width: 768px) {
+    .content-details {
+        margin-top: 10rem;
+    }
+    .row {
+        margin: 0;
+    }
+
+    .baivietlienquan ul li {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cmt {
+        padding: 20px 15px;
+    }
+
+    .baivietlienquan ul li {
+        flex: 0 0 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-sm-8 {
+        width: 66.6667%;
+    }
+
+    .col-sm-4 {
+        width: 33.3333%;
+    }
+}
+
+.sidebarnew.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .sidebarnew {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    .sidebarnew.show {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

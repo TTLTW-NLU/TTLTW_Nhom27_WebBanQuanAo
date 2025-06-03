@@ -1,0 +1,215 @@
+body {
+    background-color: var(--primary-color);
+}
+
+/*=============== CARD ===============*/
+#section_commitment .container {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+#section_commitment .card__container {
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+#section_commitment .card__article {
+    position: relative;
+    overflow: hidden;
+}
+
+#section_commitment .card__img {
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+#section_commitment .card__data {
+    width: 280px;
+    background-color: var(--white-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+#section_commitment .card__data h5 {
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+/* Naming animations in hover */
+#section_commitment .card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+#section_commitment .card__article:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+#section_commitment .card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+
+#section_commitment .card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+
+    50% {
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50% {
+        overflow: hidden;
+    }
+}
+
+/*=============== Quality section ===============*/
+#section_quality {
+    margin-top: 12rem;
+    background-color: #e1ded0;
+    position: relative;
+}
+#section_quality .line_top {
+    width: 100%;
+    height: 5rem;
+    border-bottom: 2px solid var(--black-color);
+}
+#section_quality .container_bottom {
+    height: 55rem;
+    margin: 0;
+    padding-left: 17rem;
+    justify-content: space-between;
+}
+#section_quality .line_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    border-right: 2px solid var(--black-color);
+}
+#section_quality .content {
+    margin-top: 7%;
+    width: 40%;
+}
+#section_quality .content h1 {
+    font-size: 8rem;
+}
+#section_quality .content p {
+    font-size: 1.5rem;
+}
+#section_quality .content a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--lighter-second-color);
+    text-decoration: none;
+    position: relative;
+}
+#section_quality .content a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -12%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--lighter-second-color);
+    transition: width 0.3s ease;
+}
+#section_quality .content a:hover::after {
+    width: 0;
+}
+#section_quality .picture {
+    width: 40%;
+    background-color: #c8c7b3;
+}
+#section_quality .picture img {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    width: 30%;
+    height: 95%;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+    #section_commitment .container {
+        margin-inline: 1rem;
+    }
+
+    #section_commitment .card__data {
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+    #section_commitment .card__container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+    #section_commitment .container {
+        height: 90vh;
+    }
+
+    #section_commitment .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #section_commitment .card__img {
+        width: 348px;
+    }
+
+    #section_commitment .card__data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}

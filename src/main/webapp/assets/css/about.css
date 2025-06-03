@@ -1,0 +1,708 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #cfc8c3 !important;
+}
+
+/* hero */
+.hero {
+    background-color: #cfc8c3;
+    color: #1d1b19;
+    padding: 50px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-main {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    left:60%;
+}
+
+.hero p {
+    font-size: 1.8em;
+}
+
+.hero-title {
+    font-size: 10rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1d1b19;
+}
+
+.hero-button {
+    background-color: #1d1b19;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #3a3633;
+}
+
+.hero-right {
+    right:70%
+}
+
+.hero-image {
+    width: 70%;
+    height: 40%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-left: 50px;
+}
+
+/* Phần thông tin bên dưới */
+.hero-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    margin-top: 15rem;
+}
+
+.hero-year {
+
+    text-align: left;
+}
+
+.hero-slogan {
+    flex: 1;
+    text-align: right;
+}
+
+/* Phần trên */
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-logo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.hero-intro {
+    font-size: 1em;
+}
+
+/* Phần ngày tháng */
+.intro-text span {
+    font-size: 1em;
+    color: #cfc8c3;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Giới Thiệu 1 */
+.intro {
+    padding: 80px 20px;
+    background-color: #1d1b19;
+    color: white;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-text {
+    flex: 1;
+    padding: 20px;
+    color: #cfc8c3;
+    padding-bottom: 0;
+}
+
+.intro-text h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.5em;
+}
+
+/* Bố cục hình ảnh */
+.intro-images {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    gap: 20px;
+}
+
+.images-left {
+    margin-top: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.images-left .image-small {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.images-right {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.images-right .image-small {
+    width: 48%;
+    height: 91%;
+    border-radius: 10px;
+}
+
+/* Giới Thiệu 2 */
+#intro2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Phần trên */
+.intro-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro-image-large {
+    width: 66%;
+}
+
+.intro-image-large img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.intro-text-2 {
+    width: 30%;
+    flex: 1;
+    padding: 20px;
+    color: #cfc8c3;
+    padding-bottom: 0;
+}
+
+.intro-text-2 h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.intro-text-2 p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* Phần dưới */
+.intro-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.intro-bottom .image-small {
+    width: 35%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Tổng thể phần Giới Thiệu 3 */
+#intro3 {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#intro3 .intro-heading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    color: #cfc8c3;
+}
+
+/* Container chứa các thẻ */
+#intro3 .founder-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Thẻ từng thành viên */
+#intro3 .founder-card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cfc8c3;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Avatar tròn */
+#intro3 .founder-card .avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+#intro3 .founder-card .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #cfc8c3;
+}
+
+/* Tên và chức vụ */
+#intro3 .founder-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #1d1b19;
+}
+
+#intro3 .founder-card p {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+
+/* Phần Chốt Lại */
+#closing {
+    background-color: #cfc8c3;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#closing .closing-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1d1b19;
+}
+
+#closing .closing-content p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #1d1b19;
+    margin-bottom: 1.5rem;
+}
+
+#closing .btn-discover {
+    font-size: 1.4rem;
+    padding: 1.5rem 1.5rem;
+    color: #ffffff;
+    background-color: #1d1b19;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closing .btn-discover:hover {
+    background-color: #3a3734;
+}
+
+#closing img {
+    display: block;
+    margin: 1.5rem auto;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Responsive CSS cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+
+    /* Giới Thiệu 1 */
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-text {
+        padding: 20px;
+    }
+
+    .images-left {
+        margin-top: 2rem;
+    }
+
+    .images-left .image-small {
+        width: 80%;
+    }
+
+    .images-right {
+        gap: 10px;
+    }
+
+    .images-right .image-small {
+        width: 48%;
+    }
+
+    /* Giới Thiệu 2 */
+    #intro2 {
+        gap: 10px;
+    }
+
+    .intro-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro-image-large {
+        width: 100%;
+    }
+
+    .intro-image-large img {
+        height: auto;
+    }
+
+    .intro-text-2 {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .intro-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .intro-bottom .image-small {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    /* Giới Thiệu 3 */
+    #intro3 .founder-cards {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #intro3 .founder-card {
+        width: 90%;
+    }
+
+    /* Phần Chốt Lại */
+    #closing {
+        padding: 2rem 1rem;
+    }
+
+    #closing .closing-content h2 {
+        font-size: 2rem;
+    }
+
+    #closing .closing-content p {
+        font-size: 1.2rem;
+    }
+
+    #closing .btn-discover {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    #closing img {
+        width: 70%;
+    }
+}
+
+/* Responsive CSS cho màn hình nhỏ nhất (320px) */
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 2rem; 
+        overflow-x: hidden;
+    }
+
+    .hero-container {
+        max-width: 100%;
+        padding: 0; 
+    }
+
+    .hero-main {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .hero-left {
+        text-align: center; 
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-button {
+        font-size: 0.8rem;
+        border-radius: 20px; 
+    }
+
+    .hero-info {
+        margin-top: 2rem;
+        font-size: 0.8rem; 
+        display: flex;
+        flex-direction: column; 
+        gap: 10px; 
+        text-align: center;
+    }
+
+    .hero-year,
+    .hero-slogan {
+        text-align: center;
+    }
+
+    .hero-right {
+        text-align: center;
+        margin-top: 1.5rem; 
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    /* Giới Thiệu 1 */
+    .intro-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-text {
+        padding: 10px;
+    }
+
+    .images-left {
+        margin-top: 1rem;
+    }
+
+    .images-left .image-small {
+        width: 90%;
+    }
+
+    .images-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .images-right .image-small {
+        width: 90%;
+    }
+
+    /* Giới Thiệu 2 */
+    #intro2 {
+        gap: 10px;
+    }
+
+    .intro-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro-image-large {
+        width: 100%;
+    }
+
+    .intro-image-large img {
+        height: auto;
+    }
+
+    .intro-text-2 {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .intro-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .intro-bottom .image-small {
+        width: 90%;
+    }
+
+    /* Giới Thiệu 3 */
+    #intro3 .founder-cards {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #intro3 .founder-card {
+        width: 90%;
+    }
+
+    /* Phần Chốt Lại */
+    #closing {
+        padding: 1.5rem 1rem;
+    }
+
+    #closing .closing-content h2 {
+        font-size: 1.8rem;
+    }
+
+    #closing .closing-content p {
+        font-size: 1rem;
+    }
+
+    #closing .btn-discover {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    #closing img {
+        width: 80%;
+    }
+}
+
+
+/* Hero trên màn hình lớn hơn 900px */
+@media (max-width: 940px) {
+    .hero {
+        padding: 80px;
+        margin-top: 20rem;
+    }
+
+    .hero-container {
+        max-width: 1400px; 
+    }
+
+    .hero-main {
+        align-items: center;
+        gap: 60px; 
+    }
+
+    .hero-left {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 6rem; 
+        margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1.8em;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-button {
+        font-size: 1.2rem; 
+        padding: 15px 30px;
+        border-radius: 50px;
+    }
+
+    .hero-info {
+        margin-top: 3rem; 
+        font-size: 1.2rem;
+        gap: 20px;
+    }
+
+    .hero-year, .hero-slogan {
+        text-align: left; 
+    }
+
+    .hero-right {
+        flex: 1;
+        text-align: right;
+    }
+
+    .hero-image {
+        width: 60%;
+        height: auto;
+        border-radius: 15px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .hero {
+        padding: 40px;
+        margin-top: 20rem;
+    }
+
+    .hero-container {
+        width: 100%;
+        max-width: 1100px; 
+    }
+
+    .hero-main {
+        flex-direction: row; 
+        align-items: center;
+        gap: 30px;
+    }
+
+    .hero-left {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-title {
+        font-size: 4rem; 
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem; 
+        margin-bottom: 1rem;
+    }
+
+    .hero-button {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+        border-radius: 50px;
+    }
+
+    .hero-info {
+        margin-top: 2rem; 
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-right {
+        flex: 1;
+        text-align: right; 
+    }
+
+    .hero-image {
+        width: 70%; 
+        height: auto;
+        border-radius: 10px;
+    }
+}

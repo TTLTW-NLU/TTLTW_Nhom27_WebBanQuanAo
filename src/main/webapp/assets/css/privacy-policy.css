@@ -1,0 +1,54 @@
+body {
+  background-color: var(--primary-color) !important;
+}
+
+.policy-section {
+  padding: 4rem 2rem;
+  color: var(--second-color);
+  margin-top: 10rem;
+}
+
+.policy-section h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.policy-section ul {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  margin-left: 2rem;
+}
+
+.policy-section ul li {
+  margin-bottom: 1.5rem;
+}
+
+.policy-section p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.policy-button button {
+  padding: 1.2rem 4rem;
+  font-size: 1.8rem;
+  background-color: var(--second-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.policy-button button:hover {
+  background-color: #3b9b84;
+  transform: scale(1.05);
+}

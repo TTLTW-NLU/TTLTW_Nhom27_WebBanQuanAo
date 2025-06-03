@@ -1,0 +1,239 @@
+/* ========================== All products ========================== */
+#section_all_products {
+    margin-top: 15rem;
+}
+
+/* Top */
+#section_all_products .top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#section_all_products .top .filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#section_all_products .top .filter .custom_icon {
+    font-size: 1.6rem;
+}
+
+#section_all_products .top h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section_all_products .top .sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+#section_all_products .top .sort label {
+    width: 13rem;
+}
+
+#section_all_products .top .sort select {
+    font-size: 1.2rem;
+    width: 20rem;
+}
+
+/* Bottom */
+#section_all_products .bottom {
+    display: flex;
+}
+
+/* Filter */
+#section_all_products .filter {
+    width: 20%;
+    padding-right: 1rem;
+}
+
+#filter-category,
+#filter-size,
+#filter-color,
+#filter-price,
+#filter-brand,
+#filter-material,
+#filter-style,
+#filter-promotion,
+#filter-rating {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+#filter-category h4,
+#filter-size h4,
+#filter-color h4,
+#filter-price h4,
+#filter-brand h4,
+#filter-material h4,
+#filter-style h4,
+#filter-promotion h4,
+#filter-rating h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin: 0;
+}
+
+#section_all_products .filter-content.active {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#section_all_products .filter-content {
+    display: none;
+    padding-top: 5px;
+}
+
+#section_all_products .filter-content label {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#section_all_products .filter .arrow {
+    transition: transform 0.3s;
+}
+
+#section_all_products .filter .arrow.active {
+    transform: rotate(180deg);
+}
+
+#section_all_products .filter-submit .btn {
+    margin-top: 1rem;
+    background-color: var(--lighter-second-color);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* List Products */
+#section_all_products .list_products {
+    width: 80%;
+    border-left: solid 1px #000;
+    position: relative;
+}
+
+/* Product cards */
+#section_all_products .list_products .product-card {
+    padding: 0;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+    color: black;
+    cursor: pointer !important;
+}
+
+#section_all_products .list_products .product-card img {
+    transition: transform .3s ease;
+}
+
+#section_all_products .list_products .product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#section_all_products .list_products .product-card:hover img {
+    transform: scale(0.98);
+}
+
+#section_all_products .list_products .product-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+    height: 30rem;
+}
+
+#section_all_products .list_products .product-title {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+#section_all_products .list_products .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#section_all_products .list_products .product-button {
+    background-color: var(--second-color);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Pagination */
+#pagination .custom-pagination .page-link i {
+    font-size: 16px;
+    vertical-align: middle;
+    color: #3f3f3f;
+    transition: color 0.2s ease-in-out;
+}
+
+#pagination .custom-pagination .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pagination .custom-pagination .page-link i:hover {
+    color: #234f45;
+}
+
+#pagination .custom-pagination .pagination {
+    background-color: #f9f6f3;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#pagination .custom-pagination .page-item {
+    margin: 0 5px;
+}
+
+#pagination .custom-pagination .page-link {
+    color: #3f3f3f;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+#pagination .custom-pagination .page-link:hover {
+    color: #3f3f3f;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+#pagination .custom-pagination .page-item.active .page-link {
+    background-color: #234f45;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#pagination .custom-pagination .page-item.disabled .page-link {
+    color: #ddd;
+    cursor: not-allowed;
+}
+
+#pagination .custom-pagination .dots {
+    cursor: default;
+    color: #3f3f3f;
+    pointer-events: none;
+}
