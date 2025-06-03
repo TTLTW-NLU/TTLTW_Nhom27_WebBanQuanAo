@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class Config {
 
     public static String vnp_PayUrl = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-    public static String vnp_ReturnUrl = "http://localhost:8080/WebBanQuanAo/VnpayReturn";
+    public static String vnp_ReturnUrl = "https://ttltw-nhom27-webbanquanao.onrender.com/VnpayReturn";
     public static String vnp_TmnCode = "2VLZKZ6W";
     public static String secretKey = "MEONX8HY6ISS001E1I0FFJKF1MXNCHO7";
     public static String vnp_ApiUrl = "https://sandbox.vnpayment.vn/merchant_webapi/api/transaction";
