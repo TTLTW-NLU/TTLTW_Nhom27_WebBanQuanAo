@@ -8,7 +8,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class CapchaUtil {
-    private static final String SECRET_KEY = "6LcIsA4rAAAAAJcp-uZKc7SYaGkX9rV9ljZcn_tk";
+    private static final String SECRET_KEY = "6LeYvVQrAAAAADNsFR5RxnD5_3tQrruzHwtdsStO";
 
     public static boolean verifyRecaptcha(String gRecaptchaResponse) throws IOException {
         if (gRecaptchaResponse == null || gRecaptchaResponse.isEmpty()) {
