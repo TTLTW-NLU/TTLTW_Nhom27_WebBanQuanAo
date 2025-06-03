@@ -37,7 +37,7 @@ public class ForgotPassword extends HttpServlet {
 
         ResetService resetService = new ResetService();
         String token = resetService.genarateToken();
-        String linkReset = "http://localhost:8080/WebBanQuanAo/ResetPassword?email=" + URLEncoder.encode(email, "UTF-8") + "&token=" + token;
+        String linkReset = "https://ttltw-nhom27-webbanquanao.onrender.com/ResetPassword?email=" + URLEncoder.encode(email, "UTF-8") + "&token=" + token;
 
         TokenForgotPassword newTokenForgot = new TokenForgotPassword(user.getId(), token, resetService.expiresAt());
 
