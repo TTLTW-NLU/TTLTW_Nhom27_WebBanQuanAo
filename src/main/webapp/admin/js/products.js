@@ -10,7 +10,7 @@
 // Lấy danh sách sản phẩm từ server
 function fetchProducts() {
     $.ajax({
-        url: '/WebBanQuanAo/admin/api/products',
+        url: '/admin/api/products',
         type: 'GET',
         dataType: 'json',
         success: function (response) {
