@@ -113,26 +113,54 @@ public class Config {
 //    }
 
     public static String getIpAddress(HttpServletRequest request) {
-        // 1. Ưu tiên các header proxy
-        String ip = Stream.of(
-                        request.getHeader("X-Forwarded-For"),
-                        request.getHeader("X-Real-IP"),
-                        request.getRemoteAddr()
-                )
-                .filter(ipAddr -> ipAddr != null && !ipAddr.isEmpty())
-                .findFirst()
-                .orElse("");
-
-        // 2. Lấy IP đầu tiên nếu có nhiều IP
-        ip = ip.split(",")[0].trim();
-
-        // 3. Kiểm tra IP có thuộc Render không
-        if (RenderIPConfig.isRenderIP(ip)) {
+       String ip = null;
+    try {
+        // 1. X-Forwarded-For (nếu request đi qua nhiều proxy, format: "clientIp, proxy1, proxy2")
+        ip = request.getHeader("X-Forwarded-For");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            // Nếu có nhiều IP, lấy phần đầu (Client IP)
+            if (ip.contains(",")) {
+                ip = ip.split(",")[0].trim();
+            }
             return ip;
         }
 
-        // 4. Fallback: dùng IP mặc định của Render
-        return RenderIPConfig.getPrimaryIP();
+        // 2. X-Real-IP (có thể Render hoặc 1 số proxy khác đưa lên)
+        ip = request.getHeader("X-Real-IP");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            return ip;
+        }
+
+        // 3. Proxy-Client-IP (trường hợp cũ của một số proxy)
+        ip = request.getHeader("Proxy-Client-IP");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            return ip;
+        }
+
+        // 4. WL-Proxy-Client-IP (WebLogic)
+        ip = request.getHeader("WL-Proxy-Client-IP");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            return ip;
+        }
+
+        // 5. HTTP_CLIENT_IP (một số proxy khác)
+        ip = request.getHeader("HTTP_CLIENT_IP");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            return ip;
+        }
+
+        // 6. HTTP_X_FORWARDED_FOR
+        ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+        if (ip != null && ip.length() != 0 && !"unknown".equalsIgnoreCase(ip)) {
+            return ip;
+        }
+
+        // Cuối cùng mới dùng getRemoteAddr()
+        ip = request.getRemoteAddr();
+    } catch (Exception e) {
+        ip = "Invalid IP: " + e.getMessage();
+    }
+    return ip;
     }
 
     public static String getRandomNumber(int len) {
