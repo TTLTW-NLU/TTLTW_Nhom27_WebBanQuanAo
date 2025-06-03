@@ -39,7 +39,7 @@ public class SendChangePasswordEmailServlet extends HttpServlet {
             TokenForgotPassword tokenData = new TokenForgotPassword(user.getId(), token, expiresAt);
             tokenDao.insertTokenForgot(tokenData);
 
-            String link = "http://localhost:8080/WebBanQuanAo/change-password?token=" + token;
+            String link = "https://ttltw-nhom27-webbanquanao.onrender.com/change-password?token=" + token;
 
             String subject = "Xác nhận đổi mật khẩu";
             String content = "<div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9; text-align: center;\">"
