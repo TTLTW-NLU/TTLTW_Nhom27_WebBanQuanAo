@@ -24,6 +24,9 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Copy WAR từ builder stage sang thư mục webapps của Tomcat
 COPY --from=builder /app/target/WebBanQuanAo-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
+# Ghi đè server.xml để tắt cổng shutdown
+COPY tomcat-server.xml /usr/local/tomcat/conf/server.xml
+
 # Mở cổng 8080
 EXPOSE 8080
 

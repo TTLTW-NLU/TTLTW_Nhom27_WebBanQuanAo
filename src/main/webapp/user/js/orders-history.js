@@ -1,6 +1,6 @@
 function fetchOrdersForUser() {
     $.ajax({
-        url: "/WebBanQuanAo/user/orderController",
+        url: "/user/orderController",
         type: "GET",
         dataType: "json",
         cache: false,
@@ -193,7 +193,7 @@ function submitCancelOrder(event) {
     }
 
     $.ajax({
-        url: '/WebBanQuanAo/user/orderController?action=cancel',
+        url: '/user/orderController?action=cancel',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ id: parseInt(orderId, 10), cancelReason: reason.trim() }),
@@ -216,7 +216,7 @@ function completedOrder(event) {
     }
 
     $.ajax({
-        url: '/WebBanQuanAo/user/orderController?action=confirm',
+        url: '/user/orderController?action=confirm',
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({id: orderId}),
