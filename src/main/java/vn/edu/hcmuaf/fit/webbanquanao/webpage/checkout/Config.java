@@ -99,41 +99,41 @@ public class Config {
         }
     }
 
-//    public static String getIpAddress(HttpServletRequest request) {
-//        String ipAdress;
-//        try {
-//            ipAdress = request.getHeader("X-FORWARDED-FOR");
-//            if (ipAdress == null) {
-//                ipAdress = request.getRemoteAddr();
-//            }
-//        } catch (Exception e) {
-//            ipAdress = "Invalid IP:" + e.getMessage();
-//        }
-//        return ipAdress;
-//    }
-
     public static String getIpAddress(HttpServletRequest request) {
-        // 1. Ưu tiên các header proxy
-        String ip = Stream.of(
-                        request.getHeader("X-Forwarded-For"),
-                        request.getHeader("X-Real-IP"),
-                        request.getRemoteAddr()
-                )
-                .filter(ipAddr -> ipAddr != null && !ipAddr.isEmpty())
-                .findFirst()
-                .orElse("");
-
-        // 2. Lấy IP đầu tiên nếu có nhiều IP
-        ip = ip.split(",")[0].trim();
-
-        // 3. Kiểm tra IP có thuộc Render không
-        if (RenderIPConfig.isRenderIP(ip)) {
-            return ip;
+        String ipAdress;
+        try {
+            ipAdress = request.getHeader("X-FORWARDED-FOR");
+            if (ipAdress == null) {
+                ipAdress = request.getRemoteAddr();
+            }
+        } catch (Exception e) {
+            ipAdress = "Invalid IP:" + e.getMessage();
         }
-
-        // 4. Fallback: dùng IP mặc định của Render
-        return RenderIPConfig.getPrimaryIP();
+        return ipAdress;
     }
+
+//    public static String getIpAddress(HttpServletRequest request) {
+//        // 1. Ưu tiên các header proxy
+//        String ip = Stream.of(
+//                        request.getHeader("X-Forwarded-For"),
+//                        request.getHeader("X-Real-IP"),
+//                        request.getRemoteAddr()
+//                )
+//                .filter(ipAddr -> ipAddr != null && !ipAddr.isEmpty())
+//                .findFirst()
+//                .orElse("");
+//
+//        // 2. Lấy IP đầu tiên nếu có nhiều IP
+//        ip = ip.split(",")[0].trim();
+//
+//        // 3. Kiểm tra IP có thuộc Render không
+//        if (RenderIPConfig.isRenderIP(ip)) {
+//            return ip;
+//        }
+//
+//        // 4. Fallback: dùng IP mặc định của Render
+//        return RenderIPConfig.getPrimaryIP();
+//    }
 
     public static String getRandomNumber(int len) {
         Random rnd = new Random();
