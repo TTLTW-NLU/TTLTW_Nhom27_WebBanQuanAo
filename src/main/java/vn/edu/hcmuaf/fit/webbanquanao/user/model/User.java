@@ -158,8 +158,9 @@ public class User implements Serializable {
         int permission = permissions.get(resource);
         int requiredPermission = switch (action) {
             case "GET" -> 4;
-            case "POST" -> 2;
-            case "DELETE" -> 1;
+            case "POST" -> 6;
+            case "PUT" -> 6;
+            case "DELETE" -> 7;
             default -> 0;
         };
         return (permission & requiredPermission) == requiredPermission;
