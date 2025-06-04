@@ -367,11 +367,12 @@ public class UserDao {
     public User getUserByEmail(String email) {
         String sql = "SELECT * FROM users WHERE email = ?";
         return dbConnect.get().withHandle(handle -> {
+            User user = null;
             try (PreparedStatement ps = handle.getConnection().prepareStatement(sql)) {
                 ps.setString(1, email);
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
-                        User user = new User();
+                        user = new User();
                         user.setId(rs.getInt("id"));
                         user.setUserName(rs.getString("userName"));
                         user.setPassWord(rs.getString("passWord"));
@@ -382,16 +383,24 @@ public class UserDao {
                         user.setPhone(rs.getInt("phone"));
                         user.setAddress(rs.getString("address"));
                         user.setStatus(rs.getInt("status"));
-//                        user.setRoleId(rs.getInt("roleId"));
                         user.setCreatedAt(rs.getTimestamp("createdAt").toLocalDateTime());
-                        return user;
+                        // Lúc này user.roles & user.permissions đã là [] rỗng do constructor no-arg
                     }
                 }
             } catch (SQLException e) {
-                System.err.println("Lỗi khi lấy thông tin người dùng: " + e.getMessage());
                 e.printStackTrace();
             }
-            return null;
+
+            if (user != null) {
+                // 1. Load roles
+                List<String> roles = getRoleNameByUserName(user.getUserName());
+                user.setRoles(roles);
+
+                // 2. Load permissions dựa trên các role
+                Map<String,Integer> perms = getPermissionByUserName(user.getUserName());
+                user.setPermissions(perms);
+            }
+            return user;
         });
     }
 

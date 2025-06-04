@@ -27,6 +27,7 @@ public class FacebookCallbackServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        HttpSession session = request.getSession();
         String code = request.getParameter("code");
         if (code == null || code.isEmpty()) {
             response.sendRedirect("login.jsp?error=Facebook login failed");
@@ -84,8 +85,15 @@ public class FacebookCallbackServlet extends HttpServlet {
             return;
         }
 
-        HttpSession session = request.getSession();
         session.setAttribute("auth", user);
+        session.setAttribute("roles", user.getRoles());
+        session.setAttribute("permissions", user.getPermissions());
+
+        System.out.println("\n\nNotify in LoginController:");
+        System.out.println("Login success: " + user.getUserName());
+        System.out.println("Roles: " + user.getRoles());
+        System.out.println("Permissions: " + user.getPermissions());
+        System.out.println();
 
         // Chuyển hướng đến trang trước đó nếu có
         String redirect = (String) session.getAttribute("redirect_after_login");

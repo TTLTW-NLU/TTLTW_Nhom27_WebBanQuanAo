@@ -96,7 +96,6 @@ public class GoogleCallbackServlet extends HttpServlet {
         // Find or create user
         User user = userDao.getUserByEmail(email);
         if (user == null) {
-            // Create new user from Google info
             user = new User();
             user.setEmail(email);
             user.setUserName(email.split("@")[0]);
@@ -104,23 +103,32 @@ public class GoogleCallbackServlet extends HttpServlet {
             user.setLastName(lastName);
             user.setStatus(1); // Active
 
-            // Set random password for Google users
+            // Tạo password ngẫu nhiên cho Google user
             String randomPassword = BCrypt.hashpw(UUID.randomUUID().toString(), BCrypt.gensalt());
             user.setPassWord(randomPassword);
 
-            if (!userDao.createUser(user)) {
-                resp.sendRedirect("login.jsp?error=Failed to create user");
+            boolean created = userDao.createUser(user);
+            if (!created) {
+                resp.sendRedirect(req.getContextPath() + "/login.jsp?error=Failed+to+create+user");
                 return;
             }
 
-            // Get the newly created user with full details
+            // Lấy lại user vừa tạo để có đầy đủ ID, roles, permissions…
             user = userDao.getUserByEmail(email);
         }
 
-        // Set user object in session
+        // 7. Lưu user vào session, kèm roles và permissions
         session.setAttribute("auth", user);
+        session.setAttribute("roles", user.getRoles());
+        session.setAttribute("permissions", user.getPermissions());
 
-        // Redirect to home page
-        resp.sendRedirect("homePage");
+        System.out.println("\n\nNotify in LoginController:");
+        System.out.println("Login success: " + user.getUserName());
+        System.out.println("Roles: " + user.getRoles());
+        System.out.println("Permissions: " + user.getPermissions());
+        System.out.println();
+
+        // 8. Redirect về homePage (lưu ý dùng contextPath)
+        resp.sendRedirect(req.getContextPath() + "/homePage");
     }
 }
